@@ -10,7 +10,6 @@
 		4AB748BD14FCE2762EF7C105 /* Pods_GitHub_StarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213506D5671B8AEAD0058446 /* Pods_GitHub_StarsTests.framework */; };
 		56C8B14A858CF07EEAA5CA36 /* Pods_GitHub_Stars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A583FCF9D41173D3002099E /* Pods_GitHub_Stars.framework */; };
 		AE4B2E5E2124AB9900951850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E5D2124AB9900951850 /* AppDelegate.swift */; };
-		AE4B2E602124AB9900951850 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E5F2124AB9900951850 /* ViewController.swift */; };
 		AE4B2E632124AB9900951850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4B2E612124AB9900951850 /* Main.storyboard */; };
 		AE4B2E652124AB9B00951850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4B2E642124AB9B00951850 /* Assets.xcassets */; };
 		AE4B2E682124AB9B00951850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4B2E662124AB9B00951850 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,10 @@
 		AE4B2E922124B44500951850 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E912124B44500951850 /* Repository.swift */; };
 		AE4B2E942124BD9D00951850 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E932124BD9D00951850 /* Owner.swift */; };
 		AE4B2E962124C79E00951850 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E952124C79E00951850 /* PullRequest.swift */; };
+		AE7BE80F2124D79400476D05 /* RepositoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE80E2124D79400476D05 /* RepositoriesTableViewController.swift */; };
+		AE7BE8132124D86800476D05 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8112124D86800476D05 /* RepositoryTableViewCell.swift */; };
+		AE7BE8142124D86800476D05 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7BE8122124D86800476D05 /* RepositoryTableViewCell.xib */; };
+		AE7BE8172124DDC800476D05 /* WGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8162124DDC800476D05 /* WGExtensions.swift */; };
 		E1ED42ABE247375ADEABFFC2 /* Pods_GitHub_StarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36709173A22E183E7A6C43 /* Pods_GitHub_StarsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +51,6 @@
 		7F1205CFFC469A9F6370BC79 /* Pods-GitHub StarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub StarsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub StarsUITests/Pods-GitHub StarsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE4B2E5A2124AB9900951850 /* GitHub Stars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Stars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4B2E5D2124AB9900951850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE4B2E5F2124AB9900951850 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE4B2E622124AB9900951850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE4B2E642124AB9B00951850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE4B2E672124AB9B00951850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,10 @@
 		AE4B2E912124B44500951850 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		AE4B2E932124BD9D00951850 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		AE4B2E952124C79E00951850 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		AE7BE80E2124D79400476D05 /* RepositoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewController.swift; sourceTree = "<group>"; };
+		AE7BE8112124D86800476D05 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		AE7BE8122124D86800476D05 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
+		AE7BE8162124DDC800476D05 /* WGExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGExtensions.swift; sourceTree = "<group>"; };
 		AECB8BB26EA7C167E59BABC9 /* Pods-GitHub StarsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub StarsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub StarsTests/Pods-GitHub StarsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5312D507378DCFFCF7AFDD1 /* Pods-GitHub StarsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub StarsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub StarsUITests/Pods-GitHub StarsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E960EF03F75B2B30D02C583A /* Pods-GitHub Stars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Stars.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub Stars/Pods-GitHub Stars.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 		AE4B2E8B2124B3BA00951850 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AE7BE8152124DD9E00476D05 /* Utils */,
+				AE7BE8102124D84A00476D05 /* Views */,
 				AE4B2E902124B3E800951850 /* Assets */,
 				AE4B2E8D2124B3C400951850 /* Models */,
 				AE4B2E8F2124B3DB00951850 /* Storyboards */,
@@ -158,7 +166,7 @@
 		AE4B2E8C2124B3C000951850 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				AE4B2E5F2124AB9900951850 /* ViewController.swift */,
+				AE7BE80B2124D28B00476D05 /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -197,6 +205,31 @@
 				AE4B2E642124AB9B00951850 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AE7BE80B2124D28B00476D05 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AE7BE80E2124D79400476D05 /* RepositoriesTableViewController.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AE7BE8102124D84A00476D05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE7BE8112124D86800476D05 /* RepositoryTableViewCell.swift */,
+				AE7BE8122124D86800476D05 /* RepositoryTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE7BE8152124DD9E00476D05 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AE7BE8162124DDC800476D05 /* WGExtensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BD3E2FC083806B9E5532C6E5 /* Frameworks */ = {
@@ -333,6 +366,7 @@
 				AE4B2E682124AB9B00951850 /* LaunchScreen.storyboard in Resources */,
 				AE4B2E652124AB9B00951850 /* Assets.xcassets in Resources */,
 				AE4B2E632124AB9900951850 /* Main.storyboard in Resources */,
+				AE7BE8142124D86800476D05 /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,9 +470,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE4B2E602124AB9900951850 /* ViewController.swift in Sources */,
 				AE4B2E942124BD9D00951850 /* Owner.swift in Sources */,
+				AE7BE80F2124D79400476D05 /* RepositoriesTableViewController.swift in Sources */,
 				AE4B2E5E2124AB9900951850 /* AppDelegate.swift in Sources */,
+				AE7BE8132124D86800476D05 /* RepositoryTableViewCell.swift in Sources */,
+				AE7BE8172124DDC800476D05 /* WGExtensions.swift in Sources */,
 				AE4B2E962124C79E00951850 /* PullRequest.swift in Sources */,
 				AE4B2E922124B44500951850 /* Repository.swift in Sources */,
 			);
