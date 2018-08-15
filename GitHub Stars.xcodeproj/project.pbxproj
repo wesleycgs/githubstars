@@ -14,6 +14,8 @@
 		AE4B2E682124AB9B00951850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4B2E662124AB9B00951850 /* LaunchScreen.storyboard */; };
 		AE4B2E732124AB9B00951850 /* GitHub_StarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E722124AB9B00951850 /* GitHub_StarsTests.swift */; };
 		AE4B2E7E2124AB9B00951850 /* GitHub_StarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E7D2124AB9B00951850 /* GitHub_StarsUITests.swift */; };
+		AE4B2E922124B44500951850 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E912124B44500951850 /* Repository.swift */; };
+		AE4B2E942124BD9D00951850 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B2E932124BD9D00951850 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		AE4B2E792124AB9B00951850 /* GitHub StarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitHub StarsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4B2E7D2124AB9B00951850 /* GitHub_StarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_StarsUITests.swift; sourceTree = "<group>"; };
 		AE4B2E7F2124AB9B00951850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE4B2E912124B44500951850 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		AE4B2E932124BD9D00951850 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,8 @@
 		AE4B2E5C2124AB9900951850 /* GitHub Stars */ = {
 			isa = PBXGroup;
 			children = (
-				AE4B2E5D2124AB9900951850 /* AppDelegate.swift */,
-				AE4B2E5F2124AB9900951850 /* ViewController.swift */,
-				AE4B2E612124AB9900951850 /* Main.storyboard */,
-				AE4B2E642124AB9B00951850 /* Assets.xcassets */,
-				AE4B2E662124AB9B00951850 /* LaunchScreen.storyboard */,
-				AE4B2E692124AB9B00951850 /* Info.plist */,
+				AE4B2E8C2124B3C000951850 /* Domain */,
+				AE4B2E8B2124B3BA00951850 /* Core */,
 			);
 			path = "GitHub Stars";
 			sourceTree = "<group>";
@@ -123,6 +123,60 @@
 				AE4B2E7F2124AB9B00951850 /* Info.plist */,
 			);
 			path = "GitHub StarsUITests";
+			sourceTree = "<group>";
+		};
+		AE4B2E8B2124B3BA00951850 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B2E902124B3E800951850 /* Assets */,
+				AE4B2E8D2124B3C400951850 /* Models */,
+				AE4B2E8F2124B3DB00951850 /* Storyboards */,
+				AE4B2E8E2124B3C800951850 /* Supporting Files */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AE4B2E8C2124B3C000951850 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B2E5F2124AB9900951850 /* ViewController.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AE4B2E8D2124B3C400951850 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B2E912124B44500951850 /* Repository.swift */,
+				AE4B2E932124BD9D00951850 /* Owner.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE4B2E8E2124B3C800951850 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B2E5D2124AB9900951850 /* AppDelegate.swift */,
+				AE4B2E692124AB9B00951850 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE4B2E8F2124B3DB00951850 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B2E662124AB9B00951850 /* LaunchScreen.storyboard */,
+				AE4B2E612124AB9900951850 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AE4B2E902124B3E800951850 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B2E642124AB9B00951850 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE4B2E602124AB9900951850 /* ViewController.swift in Sources */,
+				AE4B2E942124BD9D00951850 /* Owner.swift in Sources */,
 				AE4B2E5E2124AB9900951850 /* AppDelegate.swift in Sources */,
+				AE4B2E922124B44500951850 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZA8S3VXNS5;
-				INFOPLIST_FILE = "GitHub Stars/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GitHub Stars/Core/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZA8S3VXNS5;
-				INFOPLIST_FILE = "GitHub Stars/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GitHub Stars/Core/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
