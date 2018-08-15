@@ -1,0 +1,6 @@
+framework module Pods_GitHub_StarsTests {
+  umbrella header "Pods-GitHub StarsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
