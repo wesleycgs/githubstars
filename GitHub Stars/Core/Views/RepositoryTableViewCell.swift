@@ -19,6 +19,8 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var repoLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var starsLabel: UILabel!
+    @IBOutlet weak var forksLabel: UILabel!
     
     var repository: Repository? {
         didSet {
@@ -27,6 +29,8 @@ class RepositoryTableViewCell: UITableViewCell {
             ownerLabel.text = repository.owner.login
             repoLabel.text = repository.name
             descriptionLabel.text = repository.description
+            starsLabel.text = repository.stargazersCount.description
+            forksLabel.text = repository.forksCount.description
         }
     }
 }

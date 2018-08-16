@@ -75,7 +75,7 @@ class RepositoriesTableViewController: UITableViewController {
     }
     
     @objc func refreshData() {
-        page = 0
+        page = 1
         getRepositories()
     }
 }
