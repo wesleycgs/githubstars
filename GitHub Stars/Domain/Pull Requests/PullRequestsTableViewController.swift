@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class PullRequestsTableViewController: UITableViewController {
 
@@ -65,3 +66,22 @@ extension PullRequestsTableViewController {
         return cell
     }
 }
+
+// MARK: - Table view delegate
+
+extension PullRequestsTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let pr = pullRequests[indexPath.row]
+        guard let url = URL(string: pr.htmlUrl.unwrapped) else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.modalPresentationStyle = .currentContext
+        safariViewController.modalTransitionStyle = .coverVertical
+        present(safariViewController)
+    }
+}
+
+
+
+
+
