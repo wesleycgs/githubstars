@@ -11,7 +11,7 @@ import Foundation
 struct Repository {
     var id: Int
     var name: String
-    var fullName: String?
+    var fullName: String
     var owner: Owner
     var isPrivate: Bool
     var htmlUrl: String?
@@ -39,7 +39,7 @@ extension Repository: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let id = try container.decode(Int.self, forKey: .id)
         let name = try container.decode(String.self, forKey: .name)
-        let fullName = try container.decode(String?.self, forKey: .fullName)
+        let fullName = try container.decode(String.self, forKey: .fullName)
         let owner = try container.decode(Owner.self, forKey: .owner)
         let isPrivate = try container.decode(Bool.self, forKey: .isPrivate)
         let htmlUrl = try container.decode(String?.self, forKey: .htmlUrl)

@@ -55,10 +55,32 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Repositórios" id="iDA-XG-UEV"/>
+                    <connections>
+                        <segue destination="l3E-Pq-4d5" kind="show" identifier="PullRequestsTableViewController" id="g3N-JT-Nee"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vre-aB-Nev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1308" y="793"/>
+        </scene>
+        <!--Pull Requests-->
+        <scene sceneID="J2P-SE-SWe">
+            <objects>
+                <tableViewController id="l3E-Pq-4d5" customClass="PullRequestsTableViewController" customModule="GitHub_Stars" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QUK-tb-b4r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="l3E-Pq-4d5" id="VtL-JT-LVT"/>
+                            <outlet property="delegate" destination="l3E-Pq-4d5" id="fn9-7g-G9S"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pull Requests" prompt="Owner/Library" id="dX9-U7-yOh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXx-bv-bfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482" y="793"/>
         </scene>
     </scenes>
 </document>

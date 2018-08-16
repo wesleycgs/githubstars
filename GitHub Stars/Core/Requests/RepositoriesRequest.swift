@@ -17,7 +17,7 @@ class RepositoriesRequest: BaseRequest {
 
     // MARK: - Requests
 
-    static func all(_ page: Int, _ completion: @escaping defaultArrayCallback) {
+    static func get(_ page: Int, _ completion: @escaping defaultArrayCallback) {
         let url = URLs.all
         print("\nRequesting... \(url)")
         
@@ -59,7 +59,6 @@ class RepositoriesRequest: BaseRequest {
                 }
                 break
             }
-            
         }
     }
 }

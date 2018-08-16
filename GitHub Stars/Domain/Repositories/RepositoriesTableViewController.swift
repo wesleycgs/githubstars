@@ -45,7 +45,7 @@ class RepositoriesTableViewController: UITableViewController {
             ProgressUtils.show()
         }
         
-        RepositoriesRequest.all(page) { (error, repositories) in
+        RepositoriesRequest.get(page) { (error, repositories) in
             ProgressUtils.dismiss()
             self.refreshControl?.endRefreshing()
 
@@ -61,7 +61,6 @@ class RepositoriesTableViewController: UITableViewController {
             
             self.isGettingMore = false
         }
-        
     }
     
     // MARK: - Utils
@@ -78,6 +77,14 @@ class RepositoriesTableViewController: UITableViewController {
         page = 1
         getRepositories()
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PullRequestsTableViewController, let repository = sender as? Repository {
+            destination.repository = repository
+        }
+    }
 }
 
 // MARK: - Table view data source
@@ -92,6 +99,16 @@ extension RepositoriesTableViewController {
         let repo = repositories[indexPath.row]
         cell.repository = repo
         return cell
+    }
+}
+
+// MARK: - Table view delegate
+
+extension RepositoriesTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let repository = repositories[indexPath.row]
+        performSegue(withIdentifier: String(describing: PullRequestsTableViewController.self), sender: repository)
     }
 }
 
