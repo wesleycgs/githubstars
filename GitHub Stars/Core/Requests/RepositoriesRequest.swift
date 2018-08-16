@@ -12,7 +12,7 @@ import Alamofire
 class RepositoriesRequest: BaseRequest {
 
     enum URLs {
-        static let all = "\(base)/searchs/repositories"
+        static let all = "\(base)/search/repositories"
     }
 
     // MARK: - Requests
@@ -32,7 +32,7 @@ class RepositoriesRequest: BaseRequest {
         ]
         print("params: \(params)")
 
-        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
 //            print("response: \(response)")
             
             switch response.result {

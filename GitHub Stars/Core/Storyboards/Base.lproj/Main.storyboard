@@ -35,6 +35,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" id="xeK-pI-Dha">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uWn-Kp-ysT">
+                                    <rect key="frame" x="177" y="12" width="20" height="20"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="uWn-Kp-ysT" firstAttribute="centerX" secondItem="xeK-pI-Dha" secondAttribute="centerX" id="f2H-7I-ijz"/>
+                                <constraint firstItem="uWn-Kp-ysT" firstAttribute="centerY" secondItem="xeK-pI-Dha" secondAttribute="centerY" id="fly-RR-FDA"/>
+                            </constraints>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="7er-A0-WgQ" id="6Xy-VX-xrv"/>
                             <outlet property="delegate" destination="7er-A0-WgQ" id="MyS-Me-qkj"/>
