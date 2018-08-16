@@ -32,6 +32,11 @@ class RepositoriesTableViewController: UITableViewController {
         initRefreshControl()
         registerCells()
         getRepositories()
+        
+        //Force tource
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: tableView)
+        }
     }
     
     func registerCells() {
@@ -127,5 +132,27 @@ extension RepositoriesTableViewController {
                 getRepositories()
             }
         }
+    }
+}
+
+// MARK: - View controller previewing delegate
+
+extension RepositoriesTableViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
+        guard let cell = tableView.cellForRow(at: indexPath) as? RepositoryTableViewCell else { return nil }
+        
+        previewingContext.sourceRect = cell.frame
+        let repo = repositories[indexPath.row]
+        
+        guard let viewController = storyboard?.instantiateViewController(withIdentifier: String(describing: PullRequestsTableViewController.self)) as? PullRequestsTableViewController else { return nil }
+        viewController.repository = repo
+        viewController.preferredContentSize = CGSize.zero
+        
+        return viewController
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: nil)
     }
 }

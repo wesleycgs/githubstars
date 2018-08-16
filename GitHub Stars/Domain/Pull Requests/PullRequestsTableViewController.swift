@@ -28,6 +28,11 @@ class PullRequestsTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         registerCells()
         getPullRequests()
+        
+        //Force tource
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: tableView)
+        }
     }
     
     func registerCells() {
@@ -81,7 +86,27 @@ extension PullRequestsTableViewController {
     }
 }
 
+// MARK: - View controller previewing delegate
 
+extension PullRequestsTableViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
+        guard let cell = tableView.cellForRow(at: indexPath) as? RepositoryTableViewCell else { return nil }
+        
+        previewingContext.sourceRect = cell.frame
+        let pr = pullRequests[indexPath.row]
+        
+        guard let url = URL(string: pr.htmlUrl.unwrapped) else { return nil }
+        let viewController = SFSafariViewController(url: url)
+        viewController.preferredContentSize = CGSize.zero
+        
+        return viewController
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        present(viewControllerToCommit)
+    }
+}
 
 
 

@@ -15,7 +15,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lyb-bi-oyD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Ol1-wF-dOp">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -36,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" id="xeK-pI-Dha">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uWn-Kp-ysT">
@@ -66,7 +65,7 @@
         <!--Pull Requests-->
         <scene sceneID="J2P-SE-SWe">
             <objects>
-                <tableViewController id="l3E-Pq-4d5" customClass="PullRequestsTableViewController" customModule="GitHub_Stars" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PullRequestsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l3E-Pq-4d5" customClass="PullRequestsTableViewController" customModule="GitHub_Stars" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QUK-tb-b4r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
