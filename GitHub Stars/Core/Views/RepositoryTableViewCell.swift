@@ -27,7 +27,7 @@ class RepositoryTableViewCell: UITableViewCell {
     var repositoryViewModel: RepositoryViewModel? {
         didSet {
             guard let repo = repositoryViewModel else { return }
-//            ownerAvatarImageView.sd_setImage(with: URL(string: repo.owner.avatarUrl.unwrapped))
+            ownerAvatarImageView.sd_setImage(with: repo.ownerViewModel.avatarUrl)
             fullNameLabel.attributedText = repo.fullNameAttributed
             descriptionLabel.text = repo.description
             starsLabel.text = repo.stargazers
