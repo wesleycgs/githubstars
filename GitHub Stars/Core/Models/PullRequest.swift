@@ -10,12 +10,12 @@ import Foundation
 
 struct PullRequest: Decodable {
     var id: Int
-    var url: String
+    var url: String?
     var htmlUrl: String?
     var number: Int
     var state: String
     var title: String
     var user: Owner
     var body: String?
-    var createdAt: Date
+    var createdAt: Date?
 }

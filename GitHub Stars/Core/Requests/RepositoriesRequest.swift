@@ -33,7 +33,7 @@ class RepositoriesRequest: BaseRequest {
         print("params: \(params)")
 
         Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-//            print("response: \(response)")
+            print("response from \(response.request?.url as Any): \(response)")
             
             switch response.result {
             case .failure(let error):

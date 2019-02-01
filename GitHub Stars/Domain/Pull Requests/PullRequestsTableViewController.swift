@@ -67,7 +67,7 @@ extension PullRequestsTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryTableViewCell.reuseIdentifier) as! RepositoryTableViewCell
         let pr = pullRequests[indexPath.row]
-        cell.pullRequest = pr
+        cell.pullRequestViewModel = PullRequestViewModel(pr)
         return cell
     }
 }

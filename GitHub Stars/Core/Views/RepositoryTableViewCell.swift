@@ -38,18 +38,17 @@ class RepositoryTableViewCell: UITableViewCell {
         }
     }
     
-    var pullRequest: PullRequest? {
+    var pullRequestViewModel: PullRequestViewModel? {
         didSet {
-            guard let pullRequest = pullRequest else { return }
-            ownerAvatarImageView.sd_setImage(with: URL(string: pullRequest.user.avatarUrl.unwrapped))
-//            ownerLabel.text = pullRequest.user.login
-//            repoLabel.text = nil
-            descriptionLabel.text = pullRequest.body//pullRequest HTML
+            guard let pr = pullRequestViewModel else { return }
+            ownerAvatarImageView.sd_setImage(with: pr.ownerViewModel.avatarUrl)
+            fullNameLabel.text = pr.ownerViewModel.username
+            descriptionLabel.text = pr.body
             starsLabel.text = nil
             forksLabel.text = nil
             starsForksStackView.isHidden = true
-            PRTitleLabel.text = pullRequest.title
-            PRDateLabel.text = "Aberto em \(DateUtils.string(from: pullRequest.createdAt, formatter: .brDateExtensive))"
+            PRTitleLabel.text = pr.title
+            PRDateLabel.text = pr.createdAt
         }
     }
 }
