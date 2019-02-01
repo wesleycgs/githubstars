@@ -16,8 +16,7 @@ class RepositoryTableViewCell: UITableViewCell {
     // MARK: - Outlets
     
     @IBOutlet weak var ownerAvatarImageView: UIImageView!
-    @IBOutlet weak var ownerLabel: UILabel!
-    @IBOutlet weak var repoLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var starsLabel: UILabel!
     @IBOutlet weak var forksLabel: UILabel!
@@ -25,15 +24,14 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var PRTitleLabel: UILabel!
     @IBOutlet weak var PRDateLabel: UILabel!    
     
-    var repository: Repository? {
+    var repositoryViewModel: RepositoryViewModel? {
         didSet {
-            guard let repository = repository else { return }
-            ownerAvatarImageView.sd_setImage(with: URL(string: repository.owner.avatarUrl.unwrapped))
-            ownerLabel.text = "\(repository.owner.login) /"
-            repoLabel.text = repository.name
-            descriptionLabel.text = repository.description
-            starsLabel.text = repository.stargazersCount.description
-            forksLabel.text = repository.forksCount.description
+            guard let repo = repositoryViewModel else { return }
+//            ownerAvatarImageView.sd_setImage(with: URL(string: repo.owner.avatarUrl.unwrapped))
+            fullNameLabel.attributedText = repo.fullNameAttributed
+            descriptionLabel.text = repo.description
+            starsLabel.text = repo.stargazers
+            forksLabel.text = repo.forks
             starsForksStackView.isHidden = false
             PRTitleLabel.text = nil
             PRDateLabel.text = nil
@@ -44,8 +42,8 @@ class RepositoryTableViewCell: UITableViewCell {
         didSet {
             guard let pullRequest = pullRequest else { return }
             ownerAvatarImageView.sd_setImage(with: URL(string: pullRequest.user.avatarUrl.unwrapped))
-            ownerLabel.text = pullRequest.user.login
-            repoLabel.text = nil
+//            ownerLabel.text = pullRequest.user.login
+//            repoLabel.text = nil
             descriptionLabel.text = pullRequest.body//pullRequest HTML
             starsLabel.text = nil
             forksLabel.text = nil

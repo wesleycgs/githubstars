@@ -102,7 +102,7 @@ extension RepositoriesTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryTableViewCell.reuseIdentifier) as! RepositoryTableViewCell
         let repo = repositories[indexPath.row]
-        cell.repository = repo
+        cell.repositoryViewModel = RepositoryViewModel(repo)
         return cell
     }
 }

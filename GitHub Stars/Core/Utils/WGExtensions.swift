@@ -637,6 +637,22 @@ extension UIDevice {
     }
 }
 
+// MARK: - NSMutableAttributedString
+extension NSMutableAttributedString {
+    @discardableResult func bold(_ text: String, font: UIFont = .boldSystemFont(ofSize: 17)) -> NSMutableAttributedString {
+        let attrs: [NSAttributedStringKey: Any] = [.font: font]
+        append(NSMutableAttributedString(string: text, attributes: attrs))
+        return self
+    }
+    
+    @discardableResult func normal(_ text: String, font: UIFont = .systemFont(ofSize: 15)) -> NSMutableAttributedString {
+        let attrs: [NSAttributedStringKey: Any] = [.font: font]
+        append(NSMutableAttributedString(string: text, attributes: attrs))
+        return self
+    }
+}
+
+
 // MARK: - UIAlertController
 extension UIAlertController {
     static func showAlert(_ title: String) {

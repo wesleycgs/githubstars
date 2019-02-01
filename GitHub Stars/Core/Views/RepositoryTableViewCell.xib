@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,15 +25,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="km3-cn-EvR">
                                 <rect key="frame" x="48" y="0.0" width="248" height="29.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="user /" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv7-0h-MWv">
-                                        <rect key="frame" x="0.0" y="0.0" width="39" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="user/Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv7-0h-MWv">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Repo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-8H-rXe">
-                                        <rect key="frame" x="43" y="0.0" width="205" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -145,9 +138,8 @@
                 <outlet property="PRTitleLabel" destination="zYd-Vy-Br3" id="On5-la-5uV"/>
                 <outlet property="descriptionLabel" destination="G9k-tF-1Vi" id="4TS-fS-ZQp"/>
                 <outlet property="forksLabel" destination="wLK-Vx-rlC" id="p1M-cX-IQ5"/>
+                <outlet property="fullNameLabel" destination="Rv7-0h-MWv" id="kQ1-37-HTM"/>
                 <outlet property="ownerAvatarImageView" destination="RCY-aD-AM4" id="ESF-8F-qdz"/>
-                <outlet property="ownerLabel" destination="Rv7-0h-MWv" id="H8F-ue-x86"/>
-                <outlet property="repoLabel" destination="Knh-8H-rXe" id="AWn-PK-SvG"/>
                 <outlet property="starsForksStackView" destination="ipY-PD-1Zg" id="lWZ-pw-mdJ"/>
                 <outlet property="starsLabel" destination="Cdv-Uf-0MW" id="5Fk-Y4-p1y"/>
             </connections>
@@ -155,7 +147,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="fork" width="14" height="14"/>
-        <image name="star" width="14" height="14"/>
+        <image name="fork" width="21" height="21"/>
+        <image name="star" width="21" height="21"/>
     </resources>
 </document>
